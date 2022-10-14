@@ -44,7 +44,7 @@ There are two ways to install this library.<br />
 ### 1. Library Manager 
 - &nbsp; Launch the Arduino IDE<br />
 - &nbsp; Navigate to Tools > Manage Libraries...<br />
-- &nbsp; Search for "rdv-gy512" in the query bar.<br /> 
+- &nbsp; Search for "rdv-gy521" in the query bar.<br /> 
 - &nbsp; Install the latest version of the library<br /><br />
 <img width="796" alt="Screen Shot 2022-08-26 at 3 02 00 PM" src="https://user-images.githubusercontent.com/70773397/186973894-3e89dab0-c006-4f8f-9099-b0cce59a49e7.png"><br />
 ### 2. .ZIP File 
