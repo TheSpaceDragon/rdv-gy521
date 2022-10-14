@@ -1,4 +1,4 @@
-#include "RDV_GY512.h"
+#include "RDV_GY521.h"
 #include "Wire.h"
 
 #define DVC_ADDR 0x68
@@ -22,9 +22,9 @@
 
 char tmp_str[7];
 
-GY_512::GY_512(){}
+GY_521::GY_521(){}
 
-void GY_512::sensor_init(){
+void GY_521::sensor_init(){
   Wire.begin();
   Wire.beginTransmission(DVC_ADDR);
   Wire.write(PWR_ADDR);
@@ -32,7 +32,7 @@ void GY_512::sensor_init(){
   Wire.endTransmission(true);
 }
 
-int16_t GY_512::get_raw_accel_x(){
+int16_t GY_521::get_raw_accel_x(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(X_ACCEL_ADDR);
    Wire.endTransmission(false);
@@ -41,7 +41,7 @@ int16_t GY_512::get_raw_accel_x(){
    return (Wire.read() << 8 | Wire.read());
 }
 
-int16_t GY_512::get_raw_accel_y(){
+int16_t GY_521::get_raw_accel_y(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(Y_ACCEL_ADDR);
    Wire.endTransmission(false);
@@ -50,7 +50,7 @@ int16_t GY_512::get_raw_accel_y(){
    return (Wire.read() << 8 | Wire.read());
 }
 
-int16_t GY_512::get_raw_accel_z(){
+int16_t GY_521::get_raw_accel_z(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(Z_ACCEL_ADDR);
    Wire.endTransmission(false);
@@ -59,7 +59,7 @@ int16_t GY_512::get_raw_accel_z(){
    return (Wire.read() << 8 | Wire.read());
 }
 
-int16_t GY_512::get_raw_gyro_x(){
+int16_t GY_521::get_raw_gyro_x(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(X_GYRO_ADDR);
    Wire.endTransmission(false);
@@ -68,7 +68,7 @@ int16_t GY_512::get_raw_gyro_x(){
    return (Wire.read() << 8 | Wire.read());
 }
 
-int16_t GY_512::get_raw_gyro_y(){
+int16_t GY_521::get_raw_gyro_y(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(Y_GYRO_ADDR);
    Wire.endTransmission(false);
@@ -77,7 +77,7 @@ int16_t GY_512::get_raw_gyro_y(){
    return (Wire.read() << 8 | Wire.read());
 }
 
-int16_t GY_512::get_raw_gyro_z(){
+int16_t GY_521::get_raw_gyro_z(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(Z_GYRO_ADDR);
    Wire.endTransmission(false);
@@ -86,7 +86,7 @@ int16_t GY_512::get_raw_gyro_z(){
    return (Wire.read() << 8 | Wire.read());
 }
 
-double GY_512::get_accel_x(){
+double GY_521::get_accel_x(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(X_ACCEL_ADDR);
    Wire.endTransmission(false);
@@ -95,7 +95,7 @@ double GY_512::get_accel_x(){
    return double(int16_t(Wire.read() << 8 | Wire.read()) * GRAVITY_CONSTANT/ ACCEL_SENS);
 }
 
-double GY_512::get_accel_y(){
+double GY_521::get_accel_y(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(Y_ACCEL_ADDR);
    Wire.endTransmission(false);
@@ -104,7 +104,7 @@ double GY_512::get_accel_y(){
    return double(int16_t(Wire.read() << 8 | Wire.read()) * GRAVITY_CONSTANT/ ACCEL_SENS);
 }
 
-double GY_512::get_accel_z(){
+double GY_521::get_accel_z(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(Z_ACCEL_ADDR);
    Wire.endTransmission(false);
@@ -113,7 +113,7 @@ double GY_512::get_accel_z(){
    return double(int16_t(Wire.read() << 8 | Wire.read()) * GRAVITY_CONSTANT/ ACCEL_SENS);
 }
 
-double GY_512::get_gyro_x(){
+double GY_521::get_gyro_x(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(X_GYRO_ADDR);
    Wire.endTransmission(false);
@@ -122,7 +122,7 @@ double GY_512::get_gyro_x(){
    return double(int16_t(Wire.read() << 8 | Wire.read()) / GYRO_SENS);
 }
 
-double GY_512::get_gyro_y(){
+double GY_521::get_gyro_y(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(Y_GYRO_ADDR);
    Wire.endTransmission(false);
@@ -131,7 +131,7 @@ double GY_512::get_gyro_y(){
    return double(int16_t(Wire.read() << 8 | Wire.read()) / GYRO_SENS);
 }
 
-double GY_512::get_gyro_z(){
+double GY_521::get_gyro_z(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(Z_GYRO_ADDR);
    Wire.endTransmission(false);
@@ -140,7 +140,7 @@ double GY_512::get_gyro_z(){
    return double(int16_t(Wire.read() << 8 | Wire.read()) / GYRO_SENS);
 }
 
-double GY_512::get_temperature(){
+double GY_521::get_temperature(){
    Wire.beginTransmission(DVC_ADDR);
    Wire.write(TEMP_ADDR);
    Wire.endTransmission(false);
