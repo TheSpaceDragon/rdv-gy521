@@ -1,6 +1,6 @@
 # rdv-gy521 Library
 
-An Arduino library to simplify reading values from the GY-512 gyroscope, accelerometer, and temperature sensor. Shortens code and makes it much more readable. Get raw sensor values or processed data in SI units (m/s^2, degrees, celsius) with simple to use functions!
+An Arduino library to simplify reading values from the GY-521 gyroscope, accelerometer, and temperature sensor. Shortens code and makes it much more readable. Get raw sensor values or processed data in SI units (m/s^2, degrees, celsius) with simple to use functions!
 
 ## Jump To
 - [Available Functions](#available-functions)
