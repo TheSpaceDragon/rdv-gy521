@@ -1,11 +1,11 @@
-#ifndef RDV_GY512_H
-#define RDC_GY512_H
+#ifndef RDV_GY521_H
+#define RDC_GY521_H
 
 #include "Arduino.h"
 
-class GY_512{
+class GY_521{
   public:
-    GY_512();
+    GY_521();
     
     void sensor_init();
   
