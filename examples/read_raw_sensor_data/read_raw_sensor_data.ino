@@ -1,6 +1,6 @@
-#include <RDV_GY512.h>
+#include <RDV_GY521.h>
 
-GY_512 device = GY_512();
+GY_521 device = GY_521();
 
 void setup() {
   Serial.begin(9600);
